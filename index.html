@@ -6,19 +6,19 @@
     <meta name="theme-color" content="#A55800"/>
     <link rel="stylesheet" href="https://cdn.timo-reymann.de/public/css/release.css">
     <meta property="og:description" content="GitHub | Timo Reymann"/>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
 
-	<script src="page.js"></script>
-	<style>
-		svg {
+    <script src="page.js"></script>
+    <style>
+        svg {
             margin-top: 10px;
-		}
+        }
 
-		main {
+        main {
             height: calc(100vh - 64px - 100px);
             margin-bottom: 0px;
             width: 100%;
-		}
+        }
 
         svg {
             width: 100%;
@@ -29,7 +29,7 @@
             position: absolute;
             text-align: center;
             padding: 10px;
-            background: rgba(0,0,0,.5);
+            background: rgba(0, 0, 0, .5);
             color: white;
         }
 
@@ -41,21 +41,24 @@
             text-align: center;
             font-size: 20px;
         }
+
         .alert .close-button {
             font-size: 20px;
         }
-	</style>
+    </style>
 </head>
 <body class="dark">
 <div class="alert success">
-    This displays all my public git repos, if you want to visit the repo on GitHub just click on it. The size of the bubble indicates the size of the repo, hover on one of them them to see more info.<a href="#" class="close-button"></a>
+    This displays all my public git repos, if you want to visit the repo on GitHub just click on it. The size of the
+    bubble indicates the size of the repo, hover on one of them them to see more info.<a href="#"
+                                                                                         class="close-button"></a>
 </div>
 <header>
     <span class="title"><i class="fab fa-github"></i> GitHub | Timo Reymann</span>
 </header>
 <main>
-	<svg id="repos">
-	</svg>
+    <svg id="repos">
+    </svg>
 </main>
 <footer class="text-center">
     Created by <a href="https://timo-reymann.de">Timo Reymann</a> with <span class="fa fa-fw fa-heart text-danger"
