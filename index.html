@@ -1,22 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
     <title>GitHub | Timo Reymann</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"/>
-    <meta name="theme-color" content="#A55800"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <meta name="theme-color" content="#A55800" />
     <link rel="stylesheet" href="https://cdn.timo-reymann.de/public/css/release.css">
-    <meta property="og:description" content="GitHub | Timo Reymann"/>
+    <meta property="og:description" content="GitHub | Timo Reymann" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
 
     <script src="page.js"></script>
     <style>
-        svg {
-            margin-top: 10px;
-        }
-
         main {
-            height: calc(100vh - 64px - 100px);
-            margin-bottom: 0px;
+            height: calc(100vh - 50px - 100px);
+            margin-bottom: 0;
             width: 100%;
         }
 
@@ -34,7 +31,7 @@
         }
 
         .alert {
-            position: absolute;
+            position: fixed;
             top: 45px;
             left: 0;
             right: 0;
@@ -45,25 +42,26 @@
         .alert .close-button {
             font-size: 20px;
         }
+
+        footer {
+            min-height: 6vh;
+            padding: 2rem;
+        }
     </style>
 </head>
+
 <body class="dark">
-<div class="alert success">
-    This displays all my public git repos, if you want to visit the repo on GitHub just click on it. The size of the
-    bubble indicates the size of the repo, hover on one of them them to see more info.<a href="#"
-                                                                                         class="close-button"></a>
-</div>
-<header>
-    <span class="title"><i class="fab fa-github"></i> GitHub | Timo Reymann</span>
-</header>
-<main>
-    <svg id="repos">
-    </svg>
-</main>
-<footer class="text-center">
-    Created by <a href="https://timo-reymann.de">Timo Reymann</a> with <span class="fa fa-fw fa-heart text-danger"
-                                                                             aria-hidden="true"></span> and <span
-        class="fa fa-fw fa-coffee" aria-hidden="true"></span>
-</footer>
+    <header>
+        <span class="title"><i class="fab fa-github"></i> GitHub | Timo Reymann</span>
+    </header>
+    <main>
+        <svg id="repos"></svg>
+    </main>
+
+    <footer class="text-center">
+        Created by <a href="https://timo-reymann.de">Timo Reymann</a> with <span class="fa fa-fw fa-heart text-danger"
+            aria-hidden="true"></span> and <span class="fa fa-fw fa-coffee" aria-hidden="true"></span>
+    </footer>
 </body>
+
 </html>

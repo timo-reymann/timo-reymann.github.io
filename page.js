@@ -63,7 +63,7 @@ const render = () => {
 
     // Start simulation
     d3.forceSimulation(nodes)
-        .force('charge', d3.forceManyBody(30))
+        .force('charge', d3.forceManyBody(5))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .force('collision', d3.forceCollide().radius(d => d.radius))
         .on('tick', () => {
@@ -117,7 +117,6 @@ const render = () => {
 
 // Initialize and add click listener for alert
 document.addEventListener("DOMContentLoaded", async () => {
-    document.querySelector(".close-button").addEventListener("click", e => e.target.parentElement.remove())
     await init();
     render();
 });
