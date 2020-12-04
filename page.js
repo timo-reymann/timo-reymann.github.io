@@ -10,7 +10,7 @@ const randomColor = () => '#' + parseInt(Math.random() * 0xffffff).toString(16);
 
 // Load colors codes and repositories
 const init = async () => {
-    repos = await fetch("https://api.github.com/users/timo-reymann/repos")
+    repos = await fetch("https://api.github.com/users/timo-reymann/repos?per_page=100&type=owner")
         .then(r => r.json());
     colors = await fetch("./colors.json")
         .then(r => r.json());
@@ -63,7 +63,7 @@ const render = () => {
 
     // Start simulation
     d3.forceSimulation(nodes)
-        .force('charge', d3.forceManyBody(5))
+    //       .force('charge', d3.forceManyBody(500).strength(0).distanceMax(100).distanceMin(0))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .force('collision', d3.forceCollide().radius(d => d.radius))
         .on('tick', () => {
