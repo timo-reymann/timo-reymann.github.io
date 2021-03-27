@@ -11,7 +11,8 @@ const randomColor = () => '#' + parseInt(Math.random() * 0xffffff).toString(16);
 // Load colors codes and repositories
 const init = async () => {
     repos = await fetch("https://api.github.com/users/timo-reymann/repos?per_page=100&type=owner")
-        .then(r => r.json());
+        .then(r => r.json())
+    repos = repos.filter(r => !r.archived && !r.fork)
     colors = await fetch("./colors.json")
         .then(r => r.json());
 };
