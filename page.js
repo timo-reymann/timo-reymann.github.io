@@ -76,7 +76,7 @@ const render = () => {
                 .on("mousemove", (d) => {
                     tooltip.html(`<strong>${d.repo.name}</strong>
                                   <br />
-                                  <span class="badge info">${d.repo.language}</span>
+                                  <span class="badge info">${!!d.repo.language ? d.repo.language : "other" }</span>
                                   <span class="badge warning">${(d.repo.license || {}).name || 'None'}</span><br />
                                     ${isTouchDevice ? '<a class="badge success" target="_blank" href="' + d.repo.html_url + '">Open on GitHub</a>' : ""}`)
                         .style("left", (d3.event.pageX + 5) + "px")
