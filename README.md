@@ -1,7 +1,6 @@
 timo-reymann.github.io
 ==
 
-## What is this?
 This repository contains a basic overview page over my repositories on github, visualizing size and programming language.
 
 ## Whats working under the hood?
